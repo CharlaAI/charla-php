@@ -1,0 +1,51 @@
+name: Code style and static analysis
+
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+      - develop
+
+permissions:
+  contents: read
+
+jobs:
+  coding-standard:
+    runs-on: ubuntu-22.04
+    name: Coding Standard
+    steps:
+      - name: "Checkout"
+        uses: "actions/checkout@v4"
+
+      - name: "Install PHP"
+        uses: "shivammathur/setup-php@v2"
+        with:
+          tools: flex
+          php-version: "8.2"
+          coverage: "none"
+
+      - name: "Install dependencies"
+        uses: "ramsey/composer-install@v2"
+
+      - name: "Check coding standard"
+        run: composer run check-cs
+
+  static-analysis:
+    runs-on: ubuntu-22.04
+    name: "Static analysis"
+    steps:
+      - name: "Checkout"
+        uses: "actions/checkout@v4"
+
+      - name: "Install PHP"
+        uses: "shivammathur/setup-php@v2"
+        with:
+          php-version: "8.1"
+          coverage: "none"
+
+      - name: "Install dependencies"
+        uses: "ramsey/composer-install@v2"
+
+      - name: "Run static-analysis"
+        run: composer run static-analysis
