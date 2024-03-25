@@ -1,5 +1,5 @@
 {
-  "name": "charla/charla-php-ask",
+  "name": "charla/charla-php-sdk",
   "description": "PHP Interface to CharlaAI API",
   "type": "library",
   "license": "MIT",
@@ -39,6 +39,7 @@
     }
   },
   "scripts": {
+    "tests": "vendor/bin/phpunit",
     "static-analysis": [
       "psalm --no-cache --output-format=phpstorm"
     ],
