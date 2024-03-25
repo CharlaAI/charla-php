@@ -15,7 +15,7 @@ Please try to add a test for your pull request.
 You can run the tests by calling:
 
 ```bash
-composer test
+composer tests
 ```
 
 Code quality
