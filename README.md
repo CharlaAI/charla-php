@@ -13,10 +13,6 @@
 [![License](http://poser.pugx.org/charla/charla-php-sdk/license)](https://packagist.org/packages/charla/charla-php-sdk) 
 [![PHP Version Require](http://poser.pugx.org/charla/charla-php-sdk/require/php)](https://packagist.org/packages/charla/charla-php-sdk)
 
-The Sentry PHP error reporter tracks errors and exceptions that happen during the
-execution of your application and provides instant notification with detailed
-information needed to prioritize, identify, reproduce and fix each issue.
-
 ## Getting started
 
 ### Install
