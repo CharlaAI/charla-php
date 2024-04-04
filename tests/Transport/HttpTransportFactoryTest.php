@@ -32,7 +32,7 @@ class HttpTransportFactoryTest extends TestCase
         $this->assertInstanceOf(DefaultTransport::class, $transport);
     }
 
-    public function factoryUsesProvidedClient(): void
+    public function testFactoryUsesProvidedClient(): void
     {
         $client = $this->createMock(ClientInterface::class);
 
@@ -48,7 +48,7 @@ class HttpTransportFactoryTest extends TestCase
         $this->assertSame($client, PropertyHelper::getPrivateValue($factory, 'client'));
     }
 
-    public function factoryUsesProvidedRequestFactory(): void
+    public function testFactoryUsesProvidedRequestFactory(): void
     {
         $requestFactory = $this->createMock(RequestFactoryInterface::class);
         $factory = new HttpTransportFactory(
@@ -63,7 +63,7 @@ class HttpTransportFactoryTest extends TestCase
         $this->assertSame($requestFactory, PropertyHelper::getPrivateValue($factory, 'requestFactory'));
     }
 
-    public function factoryUsesProvidedLogger(): void
+    public function testFactoryUsesProvidedLogger(): void
     {
         $logger = $this->createMock(LoggerInterface::class);
         $factory = new HttpTransportFactory(
