@@ -26,7 +26,7 @@ jobs:
           coverage: "none"
 
       - name: "Install dependencies"
-        uses: "ramsey/composer-install@v2"
+        uses: "ramsey/composer-install@v3"
 
       - name: "Check coding standard"
         run: composer run check-cs
@@ -45,7 +45,7 @@ jobs:
           coverage: "none"
 
       - name: "Install dependencies"
-        uses: "ramsey/composer-install@v2"
+        uses: "ramsey/composer-install@v3"
 
       - name: "Run static-analysis"
         run: composer run static-analysis
