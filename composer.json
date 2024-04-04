@@ -1,0 +1,62 @@
+{
+  "name": "charla/charla-php-sdk",
+  "description": "PHP Interface to CharlaAI API",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "CharlaAI\\Charla\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "CharlaAI\\Charla\\Tests\\": "tests/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Artem Kotelnikov",
+      "email": "artem.innot20@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^8.0",
+    "psr/http-factory": "^1.0",
+    "php-http/client-common": "^2.7",
+    "php-http/discovery": "^1.18"
+  },
+  "require-dev": {
+    "guzzlehttp/psr7": "^2.5",
+    "vimeo/psalm": "^5.12",
+    "phpunit/phpunit": "^9.6|^10",
+    "symfony/var-dumper": "^6.0",
+    "php-http/guzzle7-adapter": "^1.0",
+    "fakerphp/faker": "^1.23"
+  },
+  "config": {
+    "allow-plugins": {
+      "php-http/discovery": true
+    }
+  },
+  "scripts": {
+    "tests": "vendor/bin/phpunit",
+    "static-analysis": [
+      "psalm --no-cache --output-format=phpstorm"
+    ],
+    "install-cs": "test -f php-cs-fixer.phar || curl -L https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/releases/download/v3.51.0/php-cs-fixer.phar -o php-cs-fixer.phar",
+    "fix-cs": [
+      "@install-cs",
+      "@php php-cs-fixer.phar fix --diff -v --allow-risky=yes --ansi"
+    ],
+    "check-cs": [
+      "@install-cs",
+      "@php php-cs-fixer.phar fix --dry-run --diff -v --allow-risky=yes --ansi"
+    ],
+    "code-quality": [
+      "rm composer.lock",
+      "@composer install --ansi",
+      "@static-analysis",
+      "@check-cs"
+    ]
+  }
+}
