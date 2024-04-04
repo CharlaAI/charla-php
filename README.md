@@ -8,6 +8,7 @@
 
 [![CI](https://github.com/CharlaAI/charla-php/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/CharlaAI/charla-php/actions?query=workflow%3ACI+branch%3Amain)
 [![Latest Stable Version](http://poser.pugx.org/charla/charla-php-sdk/v)](https://packagist.org/packages/charla/charla-php-sdk)
+[![codecov](https://codecov.io/github/CharlaAI/charla-php/graph/badge.svg?token=U6Y7N8G1K2)](https://codecov.io/github/CharlaAI/charla-php)
 [![Total Downloads](http://poser.pugx.org/charla/charla-php-sdk/downloads)](https://packagist.org/packages/charla/charla-php-sdk)
 [![License](http://poser.pugx.org/charla/charla-php-sdk/license)](https://packagist.org/packages/charla/charla-php-sdk) 
 [![PHP Version Require](http://poser.pugx.org/charla/charla-php-sdk/require/php)](https://packagist.org/packages/charla/charla-php-sdk)
