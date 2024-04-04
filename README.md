@@ -6,6 +6,12 @@
 
 # Charla SDK for PHP
 
+[![CI](https://github.com/CharlaAI/charla-php/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/CharlaAI/charla-php/actions?query=workflow%3ACI+branch%3Amain)
+[![Latest Stable Version](http://poser.pugx.org/charla/charla-php-sdk/v)](https://packagist.org/packages/charla/charla-php-sdk)
+[![Total Downloads](http://poser.pugx.org/charla/charla-php-sdk/downloads)](https://packagist.org/packages/charla/charla-php-sdk)
+[![License](http://poser.pugx.org/charla/charla-php-sdk/license)](https://packagist.org/packages/charla/charla-php-sdk) 
+[![PHP Version Require](http://poser.pugx.org/charla/charla-php-sdk/require/php)](https://packagist.org/packages/charla/charla-php-sdk)
+
 The Sentry PHP error reporter tracks errors and exceptions that happen during the
 execution of your application and provides instant notification with detailed
 information needed to prioritize, identify, reproduce and fix each issue.
